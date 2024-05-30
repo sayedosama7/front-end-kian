@@ -11,7 +11,7 @@ import { useLocation } from 'react-router';
 const About = () => {
     const { pathname } = useLocation();
     useEffect(() => {
-      window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, [pathname]);
     return (
         <div>
@@ -66,8 +66,8 @@ const About = () => {
             </div>
             <Footer />
             <ScrollToTop smooth
-                color='#fff'
-                style={{ backgroundColor: '#372B73' }}
+                color='var(--background-color)'
+                style={{ backgroundColor: 'var(--text-color)' }}
                 className='animate__animated animate__flash animate__infinite	infinite animate__slower'
             />
 

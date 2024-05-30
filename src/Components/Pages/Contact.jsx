@@ -103,26 +103,26 @@ const Contact = () => {
                         <form action="" className='pt-4 mt-5' onSubmit={handleSubmit} autoComplete="on">
 
                             <div className="form-group animate__animated animate__zoomInDown position-relative">
-                                <label htmlFor='full_name' className="text-primary fw-bold">Full Name *</label>
+                                <label htmlFor='full_name' className="text-primary fw-bold">Full Name</label>
                                 <input id='full_name' type="text" name='full_name' value={formData.full_name} onChange={handleInputChange} className="form-control" placeholder="Your name" autoComplete="name" />
                                 {errors.full_name && <h6 className="error-log">{errors.full_name}</h6>}
                             </div>
 
                             <div className="form-group wow fadeInUp">
                                 <label htmlFor='email' className='text-primary fw-bold'>Email</label>
-                                <input id='email' className='form-control' onChange={handleInputChange} value={formData.email} type="email" name="email" autoComplete="email" />
+                                <input id='email' className='form-control' onChange={handleInputChange} value={formData.email} type="email" name="email" autoComplete="email" placeholder="Your email" />
                                 {errors.email && <h6 className="error-log">{errors.email}</h6>}
                             </div>
 
                             <div className="form-group wow fadeInUp">
                                 <label htmlFor='phone' className='text-primary fw-bold'>Phone</label>
-                                <input id='phone' className='form-control' onChange={handleInputChange} value={formData.phone} type="tel" name="phone" autoComplete="tel" />
+                                <input id='phone' className='form-control' onChange={handleInputChange} value={formData.phone} type="tel" name="phone" autoComplete="tel" placeholder="Your phone" />
                                 {errors.phone && <h6 className="error-log">{errors.phone}</h6>}
                             </div>
 
                             <div className="form-group wow fadeInUp">
                                 <label htmlFor='message' className='text-primary fw-bold'>Message</label>
-                                <textarea id='message' className='form-control p-5' onChange={handleInputChange} value={formData.message} name="message" autoComplete="off"></textarea>
+                                <textarea id='message' className='form-control pb-5' onChange={handleInputChange} value={formData.message} name="message" placeholder="type your message" autoComplete="off"></textarea>
                                 {errors.message && <h6 className="error-log">{errors.message}</h6>}
                             </div>
 
@@ -169,8 +169,8 @@ const Contact = () => {
                 </div>
             </div>
             <ScrollToTop smooth
-                color='#fff'
-                style={{ backgroundColor: '#372B73' }}
+                color='var(--background-color)'
+                style={{ backgroundColor: 'var(--text-color)' }}
                 className='animate__animated animate__flash animate__infinite	infinite animate__slower'
             />
             <Footer />

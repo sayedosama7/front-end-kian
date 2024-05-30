@@ -23,7 +23,7 @@ const Profile = () => {
         const fetchData = async () => {
             try {
                 const response = await axios.get('http://127.0.0.1:8000/api/allusers');
-                console.log(response.data); 
+                console.log(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -86,11 +86,10 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-            <ScrollToTop
-                smooth
-                color='#fff'
-                style={{ backgroundColor: '#372B73' }}
-                className='animate_animated animateflash animateinfinite infinite animate_slower'
+            <ScrollToTop smooth
+                color='var(--background-color)'
+                style={{ backgroundColor: 'var(--text-color)' }}
+                className='animate__animated animate__flash animate__infinite	infinite animate__slower'
             />
             <Footer />
         </div>

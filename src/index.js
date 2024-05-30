@@ -1,3 +1,5 @@
+// src/index.js
+
 import * as React from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -14,64 +16,65 @@ import Events from "./Components/Pages/Events";
 import CourseDetails from "./Components/Pages/CourseDetails";
 import InstructorForm from "./Components/Pages/InstructorForm";
 import Assignments from "./Components/Pages/Assignments";
+import ThemeProvider from "./ThemeContext"; // استيراد ThemeProvider
 
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App />
-    },
-    {
-        path: "/courses",
-        element: <Courses />
-    },
-    {
-        path: "/coursesDetails",
-        element: <CourseDetails />
-    },
-    {
-        path: "/instructors",
-        element: <Instructors />
-    },
-    {
-        path: "/Contact",
-        element: <Contact />
-    },
-    {
-        path: "/about",
-        element: <About />
-    },
-    {
-        path: "/signup",
-        element: <SignUp />
-    },
-    {
-        path: "/login",
-        element: <LogIn />
-    },
-    {
-        path: "/profile",
-        element: <Profile />
-    },
-    {
-        path: "/forget",
-        element: <ForgetPass />
-    },
-    {
-        path: "/events",
-        element: <Events />
-    }
-    ,
-    {
-        path: "/instructor-form",
-        element: <InstructorForm />
-    }
-    ,
-    {
-        path: "/assignments",
-        element: <Assignments />
-    }
+  {
+    path: "/",
+    element: <App />
+  },
+  {
+    path: "/courses",
+    element: <Courses />
+  },
+  {
+    path: "/coursesDetails",
+    element: <CourseDetails />
+  },
+  {
+    path: "/instructors",
+    element: <Instructors />
+  },
+  {
+    path: "/Contact",
+    element: <Contact />
+  },
+  {
+    path: "/about",
+    element: <About />
+  },
+  {
+    path: "/signup",
+    element: <SignUp />
+  },
+  {
+    path: "/login",
+    element: <LogIn />
+  },
+  {
+    path: "/profile",
+    element: <Profile />
+  },
+  {
+    path: "/forget",
+    element: <ForgetPass />
+  },
+  {
+    path: "/events",
+    element: <Events />
+  },
+  {
+    path: "/instructor-form",
+    element: <InstructorForm />
+  },
+  {
+    path: "/assignments",
+    element: <Assignments />
+  }
 ]);
 
 createRoot(document.getElementById("root")).render(
+  <ThemeProvider>
     <RouterProvider router={router} />
+  </ThemeProvider>
 );

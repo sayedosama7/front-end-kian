@@ -20,7 +20,7 @@ const Footer = () => {
   }, []);
   return (
     <div >
-      <footer className="footer text-center text-lg-start bg-body-tertiary text-muted">
+      <footer className="footer text-center text-lg-start text-muted">
         <section>
           <div className="container text-center text-md-start mt-5">
             <div className="row mt-3">
@@ -37,19 +37,19 @@ const Footer = () => {
                   Quick Links
                 </h6>
                 <p className='mb-0'>
-                  <Link to="/courses" className="text-reset">Courses</Link>
+                  <Link to="/courses" className="text-primary">Courses</Link>
                 </p>
                 <p className='mb-0'>
-                  <Link to="/register" className="text-reset">join a Career</Link>
+                  <Link to="/register" className="text-primary">join a Career</Link>
                 </p>
                 <p className='mb-0'>
-                  <Link to="/events" className="text-reset">Upcoming Events</Link>
+                  <Link to="/events" className="text-primary">Upcoming Events</Link>
                 </p>
                 <p className='mb-0'>
-                  <Link to="/gallry" className="text-reset">Gallery</Link>
+                  <Link to="/gallry" className="text-primary">Gallery</Link>
                 </p>
                 <p className='mb-0'>
-                  <Link to="/instructors" className="text-reset">instrutors Detail</Link>
+                  <Link to="/instructors" className="text-primary">instrutors Detail</Link>
                 </p>
               </div>
 
@@ -60,16 +60,16 @@ const Footer = () => {
                   Information
                 </h6>
                 <p className='mb-0'>
-                  <Link to="/login" className="text-reset">Login</Link>
+                  <Link to="/login" className="text-primary">Login</Link>
                 </p>
                 <p className='mb-0'>
-                  <Link to="/register" className="text-reset">Register</Link>
+                  <Link to="/register" className="text-primary">Register</Link>
                 </p>
                 <p className='mb-0'>
-                  <Link to="/contact" className="text-reset">Contact Us</Link>
+                  <Link to="/contact" className="text-primary">Contact Us</Link>
                 </p>
                 <p className='mb-0'>
-                  <Link to="/about" className="text-reset">About Us</Link>
+                  <Link to="/about" className="text-primary">About Us</Link>
                 </p>
               </div>
 
@@ -77,13 +77,13 @@ const Footer = () => {
                 {data.map((data, id) => (
                   <div key={id}>
                     <h6 className="text-uppercase fw-bold text-primary">Contact us</h6>
-                    <p className='mb-2'><i className="fas fa-location-dot me-2"></i>{data.footer_address}Zagazig - Agriculture Square - Abu Ahmed Supermarket Street - Choumna Building, ground floor.</p>
-                    <p className='mb-2'>
+                    <p className='mb-2 text-primary'><i className="fas fa-location-dot me-2"></i>{data.footer_address}Zagazig - Agriculture Square - Abu Ahmed Supermarket Street - Choumna Building, ground floor.</p>
+                    <p className='mb-2 text-primary'>
                       <i className="fas fa-envelope me-2"></i>
                       <a className='text-primary' href="mailto:ke4577216@gmail.com">{data.footer_mail}ke4577216@gmail.com</a>
                     </p>
-                    <a className='phone' href="tel:01062160382"><p className='mb-0'><i className="fas fa-phone me-2"></i>{data.footer_phone_1} 01062160382</p></a>
-                    <a className='phone' href="tel:01062160382"><p className='mb-0'><i className="fas fa-phone me-2"></i>{data.footer_phone_2} 01062160382</p></a>
+                    <a className='phone text-primary' href="tel:01062160382"><p className='mb-0'><i className="fas fa-phone me-2"></i>{data.footer_phone_1} 01062160382</p></a>
+                    <a className='phone text-primary' href="tel:01062160382"><p className='mb-0'><i className="fas fa-phone me-2"></i>{data.footer_phone_2} 01062160382</p></a>
                   </div>))}
               </div>
             </div>
@@ -106,7 +106,7 @@ const Footer = () => {
         </section>
         {/* End Social media  */}
 
-        <div className="text-center px-4 pb-4">
+        <div className="text-center px-4 pb-4 text-primary">
           ©2024
           ( kian academy )
           All Rights Reserved.

@@ -52,7 +52,7 @@ function CourseDetails() {
           {/* End head title  */}
 
           {/* start details  */}
-          <div className="col-md-12 col-lg-6">
+          <div className="col-md-12 col-lg-6 course-details-title">
             {/* instructor Details  */}
             <div className="card" style={{ borderRadius: "60px 0px 0px 60px" }}>
 
@@ -62,8 +62,8 @@ function CourseDetails() {
                 </Link>
 
                 <div className="m-2">
-                  <h5 className="text-primary">Ahmed Ahmed</h5>
-                  <p className="text-muted">Full Stack Developer</p>
+                  <h5 className="text-">Ahmed Ahmed</h5>
+                  <h6 className="text-">Full Stack Developer</h6>
                 </div>
               </div>
 
@@ -76,9 +76,9 @@ function CourseDetails() {
             </div>
 
             {/* Course Details  */}
-            <h1 className="text-primary">
+            <h2 className="text-primary">
               Mastering Photoshop: Advanced Techniques and Creative Mastery
-            </h1>
+            </h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Eligendi libero, illum mollitia eius ipsum omnis commodi
@@ -101,7 +101,7 @@ function CourseDetails() {
           <div>
             <table className="table table-responsive bg-light table-borderless">
               <thead>
-                <tr className="text-primary">
+                <tr>
                   <th scope="col ">Category</th>
                   <th scope="col">Difficulty</th>
                   <th scope="col">Videos</th>
@@ -155,8 +155,8 @@ function CourseDetails() {
         </div>
       </div>
       <ScrollToTop smooth
-        color='#fff'
-        style={{ backgroundColor: '#372B73' }}
+        color='var(--background-color)'
+        style={{ backgroundColor: 'var(--text-color)' }}
         className='animate__animated animate__flash animate__infinite	infinite animate__slower'
       />
       <Footer />

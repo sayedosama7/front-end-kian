@@ -14,56 +14,7 @@ import axios from 'axios';
 
 
 const InstructorHome = () => {
-    // const instructors = [
-    //     {
-    //         id: "1",
-    //         name: "ahmed hatem",
-    //         img: "/images/Home/instructors/instructor-1.jpg",
-    //         job: "full stack developer"
-    //     },
-    //     {
-    //         id: "2",
-    //         name: "ahmed hatem",
-    //         img: "/images/Home/instructors/instructor-2.jpg",
-    //         job: "full stack developer"
-    //     },
-    //     {
-    //         id: "3",
-    //         name: "ahmed hatem",
-    //         img: "/images/Home/instructors/instructor-3.jpg",
-    //         job: "full stack developer"
-    //     },
-    //     {
-    //         id: "4",
-    //         name: "ahmed hatem",
-    //         img: "/images/Home/instructors/instructor-4.jpg",
-    //         job: "full stack developer"
-    //     },
-    //     {
-    //         id: "5",
-    //         name: "ahmed hatem",
-    //         img: "/images/Home/instructors/instructor-5.jpg",
-    //         job: "full stack developer"
-    //     },
-    //     {
-    //         id: "6",
-    //         name: "ahmed hatem",
-    //         img: "/images/Home/instructors/instructor-6.jpg",
-    //         job: "full stack developer"
-    //     },
-    //     {
-    //         id: "7",
-    //         name: "ahmed hatem",
-    //         img: "/images/Home/instructors/instructor-7.jpg",
-    //         job: "full stack developer"
-    //     },
-    //     {
-    //         id: "8",
-    //         name: "ahmed hatem",
-    //         img: "/images/Home/instructors/instructor-8.jpg",
-    //         job: "full stack developer"
-    //     },
-    // ];
+
     const [data, setData] = useState([]);
     const [instructors, setInstructors] = useState([]);
 

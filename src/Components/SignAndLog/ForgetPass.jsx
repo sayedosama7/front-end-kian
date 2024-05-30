@@ -16,7 +16,7 @@ const ForgetPass = () => {
 
                         <div className="col-md-6 sign-up text-center p-5">
                             <div>
-                                <h2 className="fw-bold text-primary animate__animated animate__rollIn">Welcome to our largest community</h2>
+                                <h2 className="fw-bold animate__animated animate__rollIn">Welcome to our largest community</h2>
                                 <h6 className="fw-bold animate__animated animate__rollIn">let's learn something new today!</h6>
                             </div>
                             <img src="./images/login/log-in.svg" className="img-fluid animate__animated animate__rollIn" alt="..." />
@@ -32,7 +32,7 @@ const ForgetPass = () => {
                                 <div className="form-group animate__animated animate__zoomInDown position-relative">
                                     <label className="text-primary">E-mail address *</label>
                                     <input type="email" name='email' className="form-control" placeholder="E-mail" required />
-                                    <i className="fa-solid fa-envelope input-icon text-muted"></i>
+                                    <i className="fa-solid fa-envelope input-icon"></i>
                                 </div>
 
                                 <input className="btn btn-primary btn-block" type="submit" value="reset password" />

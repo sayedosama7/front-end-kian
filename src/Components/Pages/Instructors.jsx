@@ -12,89 +12,6 @@ const Instructors = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  // const instrutors = [
-  //   {
-  //     "name": "ahmed khaled",
-  //     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-  //     "job_title": "backend developer",
-  //     "img": "/images/instructors/instructors-1.webp",
-  //     "facebook": "https://www.facebook.com/",
-  //     "twitter": "https://www.twitter.com/",
-  //     "linkedin": "https://www.linkedin.com/",
-  //     "instagram": "https://www.instagram.com/"
-  //   },
-  //   {
-  //     "name": "taha mohamed",
-  //     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-  //     "job_title": "full stack developer",
-  //     "img": "/images/instructors/instructors-2.jpeg",
-  //     "facebook": "https://www.facebook.com/",
-  //     "twitter": "https://www.twitter.com/",
-  //     "linkedin": "https://www.linkedin.com/",
-  //     "instagram": "https://www.instagram.com/"
-  //   },
-  //   {
-  //     "name": "abdelhamed ali",
-  //     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-  //     "job_title": "full stack developer",
-  //     "img": "/images/instructors/instructors-3.webp",
-  //     "facebook": "https://www.facebook.com/",
-  //     "twitter": "https://www.twitter.com/",
-  //     "linkedin": "https://www.linkedin.com/",
-  //     "instagram": "https://www.instagram.com/"
-  //   },
-  //   {
-  //     "name": "sayed osama",
-  //     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-  //     "job_title": "mobile developer",
-  //     "img": "/images/instructors/instructors-4.webp",
-  //     "facebook": "https://www.facebook.com/",
-  //     "twitter": "https://www.twitter.com/",
-  //     "linkedin": "https://www.linkedin.com/",
-  //     "instagram": "https://www.instagram.com/"
-  //   },
-  //   {
-  //     "name": "mohamed hani",
-  //     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-  //     "job_title": "data science developer",
-  //     "img": "/images/instructors/instructors-5.jpeg",
-  //     "facebook": "https://www.facebook.com/",
-  //     "twitter": "https://www.twitter.com/",
-  //     "linkedin": "https://www.linkedin.com/",
-  //     "instagram": "https://www.instagram.com/"
-  //   },
-  //   {
-  //     "name": "mahmoud allam",
-  //     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-  //     "job_title": "games developer",
-  //     "img": "/images/instructors/instructors-6.jpeg",
-  //     "facebook": "https://www.facebook.com/",
-  //     "twitter": "https://www.twitter.com/",
-  //     "linkedin": "https://www.linkedin.com/",
-  //     "instagram": "https://www.instagram.com/"
-  //   },
-  //   {
-  //     "name": "ahmed mahmoud",
-  //     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-  //     "job_title": "full stack developer",
-  //     "img": "/images/instructors/instructors-7.jpeg",
-  //     "facebook": "https://www.facebook.com/",
-  //     "twitter": "https://www.twitter.com/",
-  //     "linkedin": "https://www.linkedin.com/",
-  //     "instagram": "https://www.instagram.com/"
-  //   },
-  //   {
-  //     "name": "ibrahim hessien",
-  //     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellendus",
-  //     "job_title": "garpgic designer",
-  //     "img": "/images/instructors/instructors-8.webp",
-  //     "facebook": "https://www.facebook.com/",
-  //     "twitter": "https://www.twitter.com/",
-  //     "linkedin": "https://www.linkedin.com/",
-  //     "instagram": "https://www.instagram.com/"
-  //   },
-
-  // ]
   const [instructors, setInstructors] = useState([]);
 
   useEffect(() => {
@@ -139,7 +56,7 @@ const Instructors = () => {
                   <div className='col-md-12 col-lg-7'>
                     <div className='instructors-caption'>
                       <h6 className='text-primary'>{instructor.name}</h6>
-                      <p className='text-muted'>{instructor.description}</p>
+                      <p className='text-muted' title={instructor.description}>{instructor.description}</p>
                       <div className='d-flex flex-column instrctors-right'>
                         <h6 className='text-primary instructors-icons'>{instructor.job}</h6>
                         {/* instructors-icons */}
@@ -159,8 +76,8 @@ const Instructors = () => {
         </div>
       </div>
       <ScrollToTop smooth
-        color='#fff'
-        style={{ backgroundColor: '#372B73' }}
+        color='var(--background-color)'
+        style={{ backgroundColor: 'var(--text-color)' }}
         className='animate__animated animate__flash animate__infinite	infinite animate__slower'
       />
       <Footer />

@@ -34,7 +34,7 @@ function Banner() {
                 <img className='rocket' src="/images/Home/rocket.png" alt='rocket' />
                 {data.map((item, id) => (
                   <div key={id}>
-                    <h2 className='text-primary wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.title_banner_1} Best Online</h2>
+                    <h2 className='text-primary wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.title_banner_1}cccccc Best Online</h2>
                     <h3 className='text-primary wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.title_banner_2} Learning</h3>
                     <h4 className=' wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.title_banner_3} Resources!</h4>
                     <h5 className='text-muted mt-4 wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.caption_banner} Make Your Free Account & Get Discounts</h5>

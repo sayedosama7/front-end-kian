@@ -150,7 +150,7 @@ const LogIn = () => {
                         <div className="row">
                             <div className="position-relative my-4">
                                 <hr />
-                                <p className="small position-absolute top-50 start-50 translate-middle bg-body px-5">Or</p>
+                                <p className="small position-absolute top-50 start-50 translate-middle bg-primary px-5">Or</p>
                             </div>
                             <div className="col-xxl-6 d-grid">
                                 <a href="#" className="btn btn-primary btn-block mb-2 signup-with"><i className="fab fa-fw fa-google me-2"></i>Login with Google</a>
@@ -166,7 +166,11 @@ const LogIn = () => {
                     </div>
                 </div>
             </div>
-            <ScrollToTop smooth color='#fff' style={{ backgroundColor: '#372B73' }} className='animate__animated animate__flash animate__infinite infinite animate__slower' />
+            <ScrollToTop smooth
+                color='var(--background-color)'
+                style={{ backgroundColor: 'var(--text-color)' }}
+                className='animate__animated animate__flash animate__infinite	infinite animate__slower'
+            />
         </div>
     );
 };

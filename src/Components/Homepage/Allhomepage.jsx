@@ -19,15 +19,15 @@ function Allhomepage() {
       <Blog/>
       <CourseCategory />
       <InstructorHome />
-      {/* <MiniDashboard /> */}
+      {/* <MiniDashboard />  */}
       <BecomeInstructor />
       <Features />
       <Discount />
       <SmokeLogo/>
       <Footer />
       <ScrollToTop smooth
-        color='#fff'
-        style={{ backgroundColor: '#372B73' }}
+        color='var(--background-color)'
+        style={{ backgroundColor: 'var(--text-color)' }}
         className='animate__animated animate__flash animate__infinite	infinite animate__slower'
       />
 

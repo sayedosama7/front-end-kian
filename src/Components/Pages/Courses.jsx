@@ -93,8 +93,8 @@ const Courses = () => {
                 </div>
             </div>
             <ScrollToTop smooth
-                color='#fff'
-                style={{ backgroundColor: '#372B73' }}
+                color='var(--background-color)'
+                style={{ backgroundColor: 'var(--text-color)' }}
                 className='animate__animated animate__flash animate__infinite	infinite animate__slower'
             />
             <Footer />
