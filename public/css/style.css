@@ -56,6 +56,19 @@ body {
     color: var(--text-dark) !important;
 }
 
+::-webkit-scrollbar {
+    background-color: var(--background-color);
+    width: 10px;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+}
+
 .text-primary,
 .bg-primary {
     color: var(--text-color) !important;
