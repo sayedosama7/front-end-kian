@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 
 import React, { useState, useEffect, useContext } from 'react';
 import { FaBars, FaTimes, FaRegUser, FaSun, FaMoon } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { ThemeContext } from '../../ThemeContext'; 
+import { ThemeContext } from '../../ThemeContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
   const [role, setRole] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
-  const { theme, toggleTheme } = useContext(ThemeContext); 
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -67,9 +68,6 @@ const Navbar = () => {
                   <Link onClick={handleLogout} className="dropdown-item">Logout</Link>
                 </div>
               </div>
-        <div className="theme-toggle" onClick={toggleTheme}>
-          {theme === 'light' ? <FaMoon size={28} /> : <FaSun size={28} />}
-        </div>
             </div>
           ) : (
             <div className="user-options">
@@ -77,10 +75,16 @@ const Navbar = () => {
               <Link to='/login' className="signup px-2 py-1 mb-2 mt-2">Log In</Link>
             </div>
           )}
+          <div className="theme-toggle theme-show-sm d-none" onClick={toggleTheme}>
+            {theme === 'light' ? <FaMoon size={28} /> : <FaSun size={28} />}
+          </div>
         </div>
         {isOpen && <div className="overlay" onClick={toggleNavbar} />}
         <div className="navbar-toggle" onClick={toggleNavbar}>
           {isOpen ? <FaTimes /> : <FaBars />}
+        </div>
+        <div className="theme-toggle theme-hide-sm" onClick={toggleTheme}>
+          {theme === 'light' ? <FaMoon size={28} /> : <FaSun size={28} />}
         </div>
       </div>
     </nav>

@@ -17,7 +17,7 @@ li {
 
 .theme-toggle {
     cursor: pointer;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
     color: var(--text-color);
 }
 
@@ -69,6 +69,7 @@ body {
 .text-muted {
     color: var(--text-muted) !important;
 }
+
 .text-reset {
     color: var(--text-muted) !important;
 }
@@ -378,9 +379,18 @@ hr:not([size]) {
         height: 2px;
         background-color: #fff;
     }
+
     .theme-toggle {
         margin-left: 0;
         margin-top: 20px;
+    }
+
+    .theme-show-sm {
+        display: block !important;
+    }
+
+    .theme-hide-sm {
+        display: none !important;
     }
 }
 
@@ -1691,7 +1701,7 @@ hr {
 /* start footer */
 
 .footer {
-    background-image:linear-gradient(to right , var(--bg-banner) ,var(--bg-banner)), url('../images/Home/background.jpg');
+    background-image: linear-gradient(to right, var(--bg-banner), var(--bg-banner)), url('../images/Home/background.jpg');
     background-size: cover;
     padding: 10px;
     color: var(--bg-color) !important;
