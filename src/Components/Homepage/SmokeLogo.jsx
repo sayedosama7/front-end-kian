@@ -4,7 +4,7 @@ import React from 'react';
 const SmokeLogo = () => {
 
     return (
-        <div>
+        <div className='smoke-page'>
             <section className='smoke'>
                 <video src="images/smoke.mp4" autoPlay muted="muted" loop></video>
 

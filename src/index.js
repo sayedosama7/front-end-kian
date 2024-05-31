@@ -12,11 +12,11 @@ import SignUp from "./Components/SignAndLog/SignUp";
 import LogIn from "./Components/SignAndLog/LogIn";
 import Profile from "./Components/SignAndLog/Profile";
 import ForgetPass from "./Components/SignAndLog/ForgetPass";
-import Events from "./Components/Pages/Events";
+import Gallery from "./Components/Pages/Gallery";
 import CourseDetails from "./Components/Pages/CourseDetails";
 import InstructorForm from "./Components/Pages/InstructorForm";
 import Assignments from "./Components/Pages/Assignments";
-import ThemeProvider from "./ThemeContext"; // استيراد ThemeProvider
+import ThemeProvider from "./ThemeContext";
 
 const router = createBrowserRouter([
   {
@@ -60,8 +60,8 @@ const router = createBrowserRouter([
     element: <ForgetPass />
   },
   {
-    path: "/events",
-    element: <Events />
+    path: "/gallery",
+    element: <Gallery />
   },
   {
     path: "/instructor-form",

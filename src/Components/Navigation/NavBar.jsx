@@ -54,7 +54,7 @@ const Navbar = () => {
           <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
           <li><Link to="/courses" className={location.pathname === '/courses' ? 'active' : ''}>Courses</Link></li>
           <li><Link to="/instructors" className={location.pathname === '/instructors' ? 'active' : ''}>Instructors</Link></li>
-          <li><Link to="/events" className={location.pathname === '/events' ? 'active' : ''}>Events</Link></li>
+          <li><Link to="/gallery" className={location.pathname === '/gallery' ? 'active' : ''}>gallery</Link></li>
           <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact Us</Link></li>
           <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link></li>
           {role === 'active' && <li><Link to="/assignments" className={location.pathname === '/assignments' ? 'active' : ''}>Assignments</Link></li>}
