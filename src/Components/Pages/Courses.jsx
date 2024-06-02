@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../Navigation/NavBar'
 import Footer from '../Navigation/Footer'
-// import { MdOutlineSlowMotionVideo } from 'react-icons/md'
-// import { CiClock2 } from 'react-icons/ci'
 import { Link, useLocation } from 'react-router-dom'
 import ScrollToTop from 'react-scroll-to-top'
 import axios from 'axios'

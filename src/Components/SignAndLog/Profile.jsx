@@ -67,13 +67,13 @@ const Profile = () => {
                         {userName && userEmail && userPhone && userCity ? (
                             <div>
                                 <h6 className='text-primary'>username  :</h6>
-                                <h5 className='profile-info'>{userName}</h5>
+                                <p className='profile-info p-2'>{userName}</p>
                                 <h6 className='text-primary'>E-mail  :</h6>
-                                <h5 className='profile-info'>{userEmail}</h5>
+                                <p className='profile-info p-2'>{userEmail}</p>
                                 <h6 className='text-primary'>phone  :</h6>
-                                <h5 className='profile-info'>{userPhone}</h5>
+                                <p className='profile-info p-2'>{userPhone}</p>
                                 <h6 className='text-primary'>city  :</h6>
-                                <h5 className='profile-info'>{userCity}</h5>
+                                <p className='profile-info p-2'>{userCity}</p>
                             </div>
                         ) : (
                             <p>Loading...</p>

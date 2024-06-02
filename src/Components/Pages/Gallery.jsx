@@ -34,19 +34,19 @@ function Gallery() {
                         <h3 className='main-title mb-5'>our special students</h3>
                         <div className="showing">
                             <div className="clipped-border">
-                                <img className='img-fluid' src="images/instructors/instructors-1.webp" id="clipped" alt="Instructor" />
+                                <img className='img-fluid' src="images/gallery/students/students-4.jpg" id="clipped" alt="Instructor" />
                             </div>
                             <div className="clipped-border">
-                                <img className='img-fluid' src="images/instructors/instructors-1.webp" id="clipped" alt="Instructor" />
+                                <img className='img-fluid' src="images/gallery/students/students-5.jpg" id="clipped" alt="Instructor" />
                             </div>
                             <div className="clipped-border">
-                                <img className='img-fluid' src="images/instructors/instructors-1.webp" id="clipped" alt="Instructor" />
+                                <img className='img-fluid' src="images/gallery/students/students-3.jpg" id="clipped" alt="Instructor" />
                             </div>
                             <div className="clipped-border">
-                                <img className='img-fluid' src="images/instructors/instructors-1.webp" id="clipped" alt="Instructor" />
+                                <img className='img-fluid' src="images/gallery/students/students-1.jpg" id="clipped" alt="Instructor" />
                             </div>
                             <div className="clipped-border">
-                                <img className='img-fluid' src="images/instructors/instructors-1.webp" id="clipped" alt="Instructor" />
+                                <img className='img-fluid' src="images/gallery/students/students-2.jpg" id="clipped" alt="Instructor" />
                             </div>
                             <div className="shadow"></div>
                         </div>
@@ -92,6 +92,7 @@ function Gallery() {
                             </div>
                         </div>
                     </div>
+                    {/* End special-events section  */}
 
                     {/* start popular section  */}
                     <section className="popular">
@@ -107,7 +108,7 @@ function Gallery() {
                                 <li>
                                     <div className="popular-card">
                                         <figure className="card-img">
-                                            <img className='img-fluid' src="images/instructors/instructors-3.webp" id="clipped" alt='clipped' />
+                                            <img className='img-fluid' src="images/gallery/popular/popular-1.jpg" id="clipped" alt='clipped' />
                                         </figure>
                                         <div className="card-content">
                                             <div className="card-rating">
@@ -126,7 +127,7 @@ function Gallery() {
                                 <li>
                                     <div className="popular-card">
                                         <figure className="card-img">
-                                            <img className='img-fluid' src="images/instructors/instructors-3.webp" id="clipped" alt='clipped' />
+                                            <img className='img-fluid' src="images/gallery/popular/popular-2.jpg" id="clipped" alt='clipped' />
                                         </figure>
                                         <div className="card-content">
                                             <div className="card-rating">
@@ -145,7 +146,7 @@ function Gallery() {
                                 <li>
                                     <div className="popular-card">
                                         <figure className="card-img">
-                                            <img className='img-fluid' src="images/instructors/instructors-3.webp" id="clipped" alt='clipped' />
+                                            <img className='img-fluid' src="images/gallery/popular/popular-3.jpg" id="clipped" alt='clipped' />
                                         </figure>
                                         <div className="card-content">
                                             <div className="card-rating">
@@ -164,7 +165,9 @@ function Gallery() {
                             </ul>
                         </div>
                     </section>
-                    {/* start package  */}
+                    {/* End popular section  */}
+
+                    {/* start Work Space  */}
                     <section className="package">
                         <div className="container">
 
@@ -177,7 +180,7 @@ function Gallery() {
                                 <li>
                                     <div className="package-card">
                                         <figure className="card-banner">
-                                            <img className='img-fluid' src="images/instructors/instructors-1.webp" id="clipped" alt='galery' />
+                                            <img className='img-fluid' src="images/gallery/workspace/work-space-3.jpg" id="clipped" alt='galery' />
                                         </figure>
                                         <div className="card-content">
                                             <h3 className="h3 card-title">Experience The Great Holiday On Beach</h3>
@@ -199,7 +202,7 @@ function Gallery() {
                                     <div className="package-card">
 
                                         <figure className="card-banner">
-                                            <img className='img-fluid' src="images/instructors/instructors-8.webp" id="clipped" alt='galery' />
+                                            <img className='img-fluid' src="images/gallery/workspace/work-space-2.jpg" id="clipped" alt='galery' />
                                         </figure>
 
                                         <div className="card-content">
@@ -226,7 +229,7 @@ function Gallery() {
                                     <div className="package-card">
 
                                         <figure className="card-banner">
-                                            <img className='img-fluid' src="images/instructors/instructors-1.webp" id="clipped" alt='galery' />
+                                            <img className='img-fluid' src="images/gallery/workspace/work-space-1.jpg" id="clipped" alt='galery' />
                                         </figure>
 
                                         <div className="card-content">
@@ -253,7 +256,7 @@ function Gallery() {
                             </ul>
                         </div>
                     </section>
-                    {/* End package  */}
+                    {/* End Work Space  */}
 
                     {/* start gallery */}
                     <section className="gallery">
@@ -270,31 +273,61 @@ function Gallery() {
 
                             <li className="gallery-item">
                                 <figure className="gallery-image">
-                                    <img className='img-fluid' src="images/instructors/instructors-8.webp" id="clipped" alt='galery' />
+                                    <img className='img-fluid' src="images/gallery/gallery/gallery-1.jpg" id="clipped" alt='galery' />
                                 </figure>
                             </li>
 
                             <li className="gallery-item">
                                 <figure className="gallery-image">
-                                    <img className='img-fluid' src="images/instructors/instructors-3.webp" id="clipped" alt='galery' />
+                                    <img className='img-fluid' src="images/gallery/gallery/gallery-2.jpg" id="clipped" alt='galery' />
                                 </figure>
                             </li>
 
                             <li className="gallery-item">
                                 <figure className="gallery-image">
-                                    <img className='img-fluid' src="images/instructors/instructors-8.webp" id="clipped" alt='galery' />
+                                    <img className='img-fluid' src="images/gallery/gallery/gallery-3.jpg" id="clipped" alt='galery' />
                                 </figure>
                             </li>
 
                             <li className="gallery-item">
                                 <figure className="gallery-image">
-                                    <img className='img-fluid' src="images/instructors/instructors-8.webp" id="clipped" alt='galery' />
+                                    <img className='img-fluid' src="images/gallery/gallery/gallery-4.jpg" id="clipped" alt='galery' />
                                 </figure>
                             </li>
 
                             <li className="gallery-item">
                                 <figure className="gallery-image">
-                                    <img className='img-fluid' src="images/instructors/instructors-8.webp" id="clipped" alt='galery' />
+                                    <img className='img-fluid' src="images/gallery/gallery/gallery-5.jpg" id="clipped" alt='galery' />
+                                </figure>
+                            </li>
+
+                            <li className="gallery-item">
+                                <figure className="gallery-image">
+                                    <img className='img-fluid' src="images/gallery/gallery/gallery-6.jpg" id="clipped" alt='galery' />
+                                </figure>
+                            </li>
+
+                            <li className="gallery-item">
+                                <figure className="gallery-image">
+                                    <img className='img-fluid' src="images/gallery/gallery/gallery-7.jpg" id="clipped" alt='galery' />
+                                </figure>
+                            </li>
+
+                            <li className="gallery-item">
+                                <figure className="gallery-image">
+                                    <img className='img-fluid' src="images/gallery/gallery/gallery-8.jpg" id="clipped" alt='galery' />
+                                </figure>
+                            </li>
+
+                            <li className="gallery-item">
+                                <figure className="gallery-image">
+                                    <img className='img-fluid' src="images/gallery/gallery/gallery-9.jpg" id="clipped" alt='galery' />
+                                </figure>
+                            </li>
+
+                            <li className="gallery-item">
+                                <figure className="gallery-image">
+                                    <img className='img-fluid' src="images/gallery/gallery/gallery-10.jpg" id="clipped" alt='galery' />
                                 </figure>
                             </li>
 
