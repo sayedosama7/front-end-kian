@@ -84,10 +84,12 @@ const LogIn = () => {
             const token = response.data.token;
             localStorage.setItem('token', token);
             localStorage.setItem('role', user.role);
+            localStorage.setItem('subscription_status', user.subscription_status);
             localStorage.setItem('username', user.username);
             localStorage.setItem('userEmail', user.email);
             localStorage.setItem('userCity', user.city);
             localStorage.setItem('userPhone', user.phone);
+            localStorage.setItem('userId', user.id);
 
             navigate('/', { replace: true });
             Toast.fire({
@@ -109,7 +111,7 @@ const LogIn = () => {
                             <h2 className="fw-bold text-primary animate__animated animate__rollIn">Welcome to our largest community</h2>
                             <h6 className="fw-bold animate__animated animate__rollIn">let's learn something new today!</h6>
                         </div>
-                        <img src="./images/login/log-in.svg" className="img-fluid animate__animated animate__rollIn" alt="..." />
+                        <img src="images/login/log-in.svg" className="img-fluid animate__animated animate__rollIn" alt="..." />
                     </div>
 
                     <div className="col-md-6 m-auto animate__animated animate__zoomInDown signup-inputs p-5">

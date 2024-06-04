@@ -15,6 +15,7 @@ import CourseDetails from "./Components/Pages/CourseDetails";
 import InstructorForm from "./Components/Pages/InstructorForm";
 import Assignments from "./Components/Pages/Assignments";
 import ThemeProvider from "./ThemeContext";
+import Enroll from "./Components/Pages/Enroll";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
   {
     path: "/assignments",
     element: <Assignments />
+  },
+  {
+    path: "/enroll",
+    element: <Enroll />
   }
 ]);
 

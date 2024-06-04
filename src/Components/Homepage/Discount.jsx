@@ -41,7 +41,7 @@ function Discount() {
                                 <img
                                     className='wow fadeInUp img-fluid'
                                     // src={`http://127.0.0.1:8000/setting/img/${data.discount_img}`}
-                                    src="/images/Home/discount-stamp-2.png"
+                                    src="images/Home/discount-stamp-2.png"
                                     alt="discount"
                                     data-wow-duration="1s"
                                     data-wow-offset="100"

@@ -19,7 +19,7 @@ const ForgetPass = () => {
                                 <h2 className="fw-bold animate__animated animate__rollIn">Welcome to our largest community</h2>
                                 <h6 className="fw-bold animate__animated animate__rollIn">let's learn something new today!</h6>
                             </div>
-                            <img src="./images/login/log-in.svg" className="img-fluid animate__animated animate__rollIn" alt="..." />
+                            <img src="images/login/log-in.svg" className="img-fluid animate__animated animate__rollIn" alt="..." />
                         </div>
 
                         {/* start form  */}

@@ -48,7 +48,7 @@ const InstructorHome = () => {
                 <Row>
                     <Col lg="5" md="12">
                         <div className='caption wow fadeInUp'>
-                            <img className='tag' src="/images/instructors/tag-2.png" alt='home'></img>
+                            <img className='tag' src="images/instructors/tag-2.png" alt='home'></img>
                             <h5 className='text-primary main-title'>Our Instructors</h5>
                             {data.map((data, id) => (
                                 <div key={id}>

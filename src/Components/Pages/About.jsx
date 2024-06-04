@@ -28,12 +28,12 @@ const About = () => {
                     </div>
 
                     <div className="col-md-6 about-banner  wow fadeInUp">
-                        <img className='img-fluid' src="/images/about/about.jpg" alt="about" />
+                        <img className='img-fluid' src="images/about/about.jpg" alt="about" />
                     </div>
 
                     <div className="col-md-6 about-banner about-banner2 position-relative wow fadeInDown">
-                        <img className='img-fluid' src="/images/about/about-2.jpg" alt="about-2" />
-                        <img className='img-fluid position-absolute kian-logo' src="/images/logo.jpeg" alt="logo" />
+                        <img className='img-fluid' src="images/about/about-2.jpg" alt="about-2" />
+                        <img className='img-fluid position-absolute kian-logo' src="images/logo.jpeg" alt="logo" />
                     </div>
 
                     <div className='col-md-6 about-courses wow fadeInUp'>

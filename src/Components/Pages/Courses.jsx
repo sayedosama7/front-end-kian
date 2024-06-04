@@ -35,7 +35,7 @@ const Courses = () => {
 
                     {/* head Banar  */}
                     <div className='m-auto position-relative col-md-6'>
-                        <img className='img-fluid tag' src="/images/instructors/tag-2.png" alt="" />
+                        <img className='img-fluid tag' src="images/instructors/tag-2.png" alt="" />
                         <h2 className='main-title text-primary mb-2 wow fadeInLeft' data-wow-delay=".3s">Our courses</h2>
                         <p className='text-muted fw-bold mb-5 wow fadeInUp' data-wow-delay=".4s" data-wow-duration="3s">
                             Our role here has increased more and this is so that we can benefit the students who are with us in our courses.
@@ -43,7 +43,7 @@ const Courses = () => {
                     </div>
 
                     <div className='col-md-6 text-center'>
-                        <img className='img-fluid wow fadeInDown hat mb-5' data-wow-delay=".3s" src="/images/instructors/instructors-banner.png" alt="title-all" />
+                        <img className='img-fluid wow fadeInDown hat mb-5' data-wow-delay=".3s" src="images/instructors/instructors-banner.png" alt="title-all" />
                     </div>
 
                     {/* start Course Card */}
@@ -55,7 +55,7 @@ const Courses = () => {
                                         src={`http://127.0.0.1:8000/categories/img/${data.cate_image}`}
                                         style={{ height: "230px" }}
                                         className="img-fluid rounded-2 " alt="Courses" />
-                                    <img className="logo position-absolute rounded-circle p-3" src="./images/logo.jpeg" alt="logo" />
+                                    <img className="logo position-absolute rounded-circle p-3" src="images/logo.jpeg" alt="logo" />
                                 </div>
                                 {/* Start course details */}
                                 <div >

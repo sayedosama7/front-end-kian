@@ -47,7 +47,7 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className="container">
         <div className="navbar-logo">
-          <Link to="/"><img src="/images/logo.jpeg" alt="Logo" /></Link>
+          <Link to="/"><img src="images/logo.jpeg" alt="Logo" /></Link>
         </div>
 
         <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
@@ -57,7 +57,7 @@ const Navbar = () => {
           <li><Link to="/gallery" className={location.pathname === '/gallery' ? 'active' : ''}>gallery</Link></li>
           <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact Us</Link></li>
           <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link></li>
-          {role === 'active' && <li><Link to="/assignments" className={location.pathname === '/assignments' ? 'active' : ''}>Assignments</Link></li>}
+          {role === 'active' && <li><Link to="/enroll" className={location.pathname === '/enroll' ? 'active' : ''}>my courses</Link></li>}
           {isLoggedIn ? (
             <div className="user-options">
               <div className="dropdown">

@@ -29,9 +29,9 @@ function Banner() {
         <Row>
           <Col md="12" lg="6">
             <div className='banner-caption'>
-              <img className='tag' src="/images/instructors/tag-2.png" alt='tag' />
+              <img className='tag' src="images/instructors/tag-2.png" alt='tag' />
               <div className='banner-title'>
-                <img className='rocket' src="/images/Home/rocket.png" alt='rocket' />
+                <img className='rocket' src="images/Home/rocket.png" alt='rocket' />
                 {data.map((item, id) => (
                   <div key={id}>
                     <h2 className='text-primary wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.title_banner_1}cccccc Best Online</h2>
@@ -43,7 +43,7 @@ function Banner() {
               </div>
               {!isLoggedIn && (
                 <div className="btn-glow my-4 wow fadeInUp" animation-duration="1.2s" data-wow-delay="0.2s">
-                  <div className="btn"><Link to="#">enroll now</Link></div>
+                  <div className="btn"><Link to="/signup">enroll now</Link></div>
                 </div>
               )}
               <img className='spin-logo' src="images/Home/Untitled-1.png" alt='home'></img>

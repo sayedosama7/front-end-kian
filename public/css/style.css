@@ -979,6 +979,7 @@ hr:not([size]) {
     border-radius: 10px !important;
     border: none !important;
     background-color: #F5F7F9;
+    text-transform: none !important;
 }
 
 .signup-form label {
@@ -1020,6 +1021,15 @@ hr {
 }
 
 .btn-submit {
+    width: 100%;
+    border: none;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding: 7px;
+    font-weight: 600;
+}
+
+.btn-submit:hover {
     width: 100%;
     border: none;
     background-color: var(--text-color);
@@ -2179,3 +2189,23 @@ video {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.enroll-courses {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.enroll-courses img {
+    border-top-left-radius: 50px;
+}
+
+/* .www {
+    height: 300px;
+} */
+/* @media (max-width:768px) {
+    .www {
+        height: auto !important;
+    }
+
+} */

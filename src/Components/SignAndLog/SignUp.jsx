@@ -79,11 +79,13 @@ const SignUp = () => {
             });
 
             const { token } = response.data;
-            const { username, email, city, phone } = response.data.data;
+            const { username, email, city, phone ,id } = response.data.data;
 
             localStorage.setItem('token', token);
             localStorage.setItem('role', 'disactive');
+            localStorage.setItem('subscription_status', 'disactive');
             localStorage.setItem('username', username);
+            localStorage.setItem('id', id);
             localStorage.setItem('userEmail', email);
             localStorage.setItem('userCity', city);
             localStorage.setItem('userPhone', phone);
@@ -116,7 +118,7 @@ const SignUp = () => {
                                 Let's learn something new today!
                             </h6>
                         </div>
-                        <img src="./images/login/log-in.svg" className="img-fluid animate__animated animate__rollIn" alt="..." />
+                        <img src="images/login/log-in.svg" className="img-fluid animate__animated animate__rollIn" alt="..." />
                     </div>
 
                     <div className="col-md-6 m-auto animate__animated animate__zoomInDown signup-inputs p-5">

@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="row mt-3">
               <div className="logo-section col-md-6 col-lg-2 col-xl-2 text-center">
                 <h6 className="text-uppercase text-primary fw-bold mb-4">
-                  <img className='footer-logo mb-3' src="/images/logo.jpeg" alt="logo" />
+                  <img className='footer-logo mb-3' src="images/logo.jpeg" alt="logo" />
                   <br />
                   kian academy
                 </h6>
