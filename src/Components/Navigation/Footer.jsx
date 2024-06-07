@@ -41,7 +41,7 @@ const Footer = () => {
                   Quick Links
                 </h6>
                 <p className='mb-0'>
-                  <Link to="/courses" className="text-primary">Courses</Link>
+                  <Link to="/categories" className="text-primary">categories</Link>
                 </p>
                 <p className='mb-0'>
                   <Link to="/instructor-form" className="text-primary">join our team</Link>
@@ -77,13 +77,13 @@ const Footer = () => {
                   <div key={id}>
                     <h6 className="text-uppercase fw-bold text-primary mb-3">Contact us</h6>
                     <p className='mb-2 text-primary mt-1 mailto'>
-                      <a className='text-primary fw-light' href={`mailto:${item.footer_mail}`}><i className="fas fa-envelope"></i> {item.footer_mail} sayed@gmail.com</a>
+                      <a className='text-primary fw-light' href={`mailto:${item.footer_mail}`}><i className="fas fa-envelope"></i> {item.footer_mail}</a>
                     </p>
                     <a className='phone text-primary fw-light' href={`tel:${item.footer_phone_1}`}>
-                      <p className='mb-0'><i className="fas fa-phone fw-light"></i> {item.footer_phone_1} 01210304516</p>
+                      <p className='mb-0'><i className="fas fa-phone fw-light"></i> {item.footer_phone_1}</p>
                     </a>
                     <a className='phone text-primary fw-light' href={`tel:${item.footer_phone_2}`}>
-                      <p className='mb-0'><i className="fas fa-phone fw-light"></i> {item.footer_phone_2} 01210304516</p>
+                      <p className='mb-0'><i className="fas fa-phone fw-light"></i> {item.footer_phone_2}</p>
                     </a>
                   </div>
                 ))}

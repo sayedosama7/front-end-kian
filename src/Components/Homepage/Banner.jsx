@@ -29,15 +29,15 @@ function Banner() {
         <Row>
           <Col md="12" lg="6">
             <div className='banner-caption'>
-              <img className='tag' src="images/instructors/tag-2.png" alt='tag' />
+              <img className='tag' src="images/tag-2.png" alt='tag' />
               <div className='banner-title'>
-                <img className='rocket' src="images/Home/rocket.png" alt='rocket' />
+                <img className='rocket' src="images/banner/rocket.png" alt='rocket' />
                 {data.map((item, id) => (
                   <div key={id}>
-                    <h2 className='text-primary wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.title_banner_1}cccccc Best Online</h2>
-                    <h3 className='text-primary wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.title_banner_2} Learning</h3>
-                    <h4 className=' wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.title_banner_3} Resources!</h4>
-                    <h5 className='text-muted mt-4 wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.caption_banner} Make Your Free Account & Get Discounts</h5>
+                    <h4 className='text-primary wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.title_banner_1}</h4>
+                    <h4 className='text-primary wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.title_banner_2}</h4>
+                    <h5 className=' wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.title_banner_3}</h5>
+                    <h5 className='text-muted mt-4 wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">{item.caption_banner}</h5>
                   </div>
                 ))}
               </div>
@@ -46,17 +46,17 @@ function Banner() {
                   <div className="btn"><Link to="/signup">enroll now</Link></div>
                 </div>
               )}
-              <img className='spin-logo' src="images/Home/Untitled-1.png" alt='home'></img>
+              <img className='spin-logo' src="images/banner/spin-logo.png" alt='home'></img>
             </div>
           </Col>
           <Col md="12" lg="6">
             <div className='head-banner'>
-              <img className='img-fluid wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s" src='images/Home/purepng.com-female-studentstudenteducationalinstitutionstudentsuniversity-studentschoolfemale-student-1421526922477gbjew.png' alt='home'></img>
+              <img className='img-fluid wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s" src='images/banner/banner.png' alt='home'></img>
               <div className=''>
-                <img className='small-img lamp animate__animated animate__jello animate__infinite animate__slower animate__delay-1s' src='images/Home/homehead/lamp.png' alt='lamp' />
-                <img className='small-img camera animate__animated animate__jello animate__infinite animate__slower animate__delay-2s' src='images/Home/homehead/camera.png' alt='lamp' />
-                <img className='small-img light animate__animated animate__jello animate__infinite animate__slower animate__delay-1s' src='images/Home/homehead/light.png' alt='lamp' />
-                <img className='small-img mic animate__animated animate__jello animate__infinite animate__slower animate__delay-2s' src='images/Home/homehead/mic.png' alt='lamp' />
+                <img className='small-img lamp animate__animated animate__jello animate__infinite animate__slower animate__delay-1s' src='images/banner/lamp.png' alt='lamp' />
+                <img className='small-img camera animate__animated animate__jello animate__infinite animate__slower animate__delay-2s' src='images/banner/camera.png' alt='lamp' />
+                <img className='small-img light animate__animated animate__jello animate__infinite animate__slower animate__delay-1s' src='images/banner/light.png' alt='lamp' />
+                <img className='small-img mic animate__animated animate__jello animate__infinite animate__slower animate__delay-2s' src='images/banner/mic.png' alt='lamp' />
               </div>
             </div>
           </Col>

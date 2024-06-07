@@ -79,13 +79,11 @@ const SignUp = () => {
             });
 
             const { token } = response.data;
-            const { username, email, city, phone ,id } = response.data.data;
+            const { username, email, city, phone, id } = response.data.data;
 
             localStorage.setItem('token', token);
-            localStorage.setItem('role', 'disactive');
-            localStorage.setItem('subscription_status', 'disactive');
             localStorage.setItem('username', username);
-            localStorage.setItem('id', id);
+            localStorage.setItem('userId', id);
             localStorage.setItem('userEmail', email);
             localStorage.setItem('userCity', city);
             localStorage.setItem('userPhone', phone);
@@ -145,16 +143,16 @@ const SignUp = () => {
                                     {errors[field] && <h6 className="error-log">{errors[field]}</h6>}
                                 </div>
                             ))}
-                            <div className="form-check my-4">
+                            {/* <div className="form-check my-4">
                                 <input className="form-check-input mt-1" type="checkbox" id="flexCheckDefault" />
                                 <label htmlFor="flexCheckDefault" className="form-check-label">
                                     By signing up, you agree to the terms of service
                                 </label>
-                            </div>
+                            </div> */}
 
                             <input className="btn-submit" type="submit" value="Sign up" />
 
-                            <div className="row">
+                            {/* <div className="row">
                                 <div className="position-relative my-4">
                                     <hr />
                                     <p className="small position-absolute top-50 start-50 translate-middle bg-primary px-5">Or</p>
@@ -169,7 +167,7 @@ const SignUp = () => {
                                         <i className="fab fa-fw fa-facebook-f me-2"></i>Signup with Facebook
                                     </a>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="mt-4 text-center">
                                 <span className="text-muted">
                                     Already have an account?

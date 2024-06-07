@@ -83,8 +83,6 @@ const LogIn = () => {
 
             const token = response.data.token;
             localStorage.setItem('token', token);
-            localStorage.setItem('role', user.role);
-            localStorage.setItem('subscription_status', user.subscription_status);
             localStorage.setItem('username', user.username);
             localStorage.setItem('userEmail', user.email);
             localStorage.setItem('userCity', user.city);
@@ -134,10 +132,10 @@ const LogIn = () => {
                             </div>
 
                             <div className="mb-4 d-flex justify-content-between mb-4">
-                                <div className="form-check">
+                                {/* <div className="form-check">
                                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
                                     <label htmlFor='exampleCheck1' className="form-check-label">Remember me</label>
-                                </div>
+                                </div> */}
                                 <div className="text-primary-hover">
                                     <Link to="/forget">
                                         <p>Forgot password?</p>
@@ -149,7 +147,7 @@ const LogIn = () => {
 
                         </form>
 
-                        <div className="row">
+                        {/* <div className="row">
                             <div className="position-relative my-4">
                                 <hr />
                                 <p className="small position-absolute top-50 start-50 translate-middle bg-primary px-5">Or</p>
@@ -160,7 +158,7 @@ const LogIn = () => {
                             <div className="col-xxl-6 d-grid">
                                 <a href="#" className="btn btn-primary btn-block signup-with-facebook"><i className="fab fa-fw fa-facebook-f me-2"></i>Login with Facebook</a>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="mt-4 text-center">
                             <span className='text-muted'>Don't have an account? <Link to="/signup">Sign up here</Link></span>

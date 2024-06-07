@@ -51,7 +51,7 @@ const Profile = () => {
                 <div className="row">
 
                     <div className='m-auto position-relative col-md-6'>
-                        <img className='img-fluid tag' src="images/instructors/tag-2.png" alt="" />
+                        <img className='img-fluid tag' src="images/tag-2.png" alt="" />
                         <h2 className='main-title text-primary mb-2 wow fadeInLeft' data-wow-delay=".3s">Profile</h2>
                         <p className='text-muted fw-bold mb-5 wow fadeInUp' data-wow-delay=".4s" data-wow-duration="3s">
                             Nice To See You! welcome to your profile
@@ -59,7 +59,7 @@ const Profile = () => {
                     </div>
 
                     <div className='col-md-6 text-center'>
-                        <img className='img-fluid wow fadeInDown hat mb-5' data-wow-delay=".3s" src="images/instructors/instructors-banner.png" alt="title-all" />
+                        <img className='img-fluid wow fadeInDown hat mb-5' data-wow-delay=".3s" src="images/banner.png" alt="title-all" />
                     </div>
 
                     {/* start form */}

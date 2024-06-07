@@ -70,7 +70,6 @@ const About = () => {
                 style={{ backgroundColor: 'var(--text-color)' }}
                 className='animate__animated animate__flash animate__infinite	infinite animate__slower'
             />
-
         </div>
     )
 }

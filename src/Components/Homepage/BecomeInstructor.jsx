@@ -26,8 +26,8 @@ function BecomeInstructor() {
                             {data.map((data, id) => (
                                 <div className='text wow fadeInUp'>
                                     <div key={id}>
-                                        <h2>{data.instructor_become_title}Become an Instructor!</h2>
-                                        <h6 className='w-75'>{data.instructor_become_caption}Lorem ipsum dolor sit amet consectetur. Non convallis sed id aliquam tempus. Volutpat tortor tincidunt egestas sit risus donec.</h6>
+                                        <h2>{data.instructor_become_title}</h2>
+                                        <h6 className='w-75'>{data.instructor_become_caption}</h6>
                                     </div>
                                 </div>))}
                             <div className="btn-glow wow fadeInUp">

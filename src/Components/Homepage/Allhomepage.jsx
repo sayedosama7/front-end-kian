@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from './Banner'
-// import MiniDashboard from './MiniDashboard'
 import InstructorHome from './InstructorHome'
 import Features from './Features'
 import ScrollToTop from 'react-scroll-to-top';
@@ -9,17 +8,14 @@ import CourseCategory from './CourseCategory'
 import Footer from '../Navigation/Footer'
 import Discount from './Discount'
 import SmokeLogo from './SmokeLogo'
-import Blog from './Blog'
 
 function Allhomepage() {
 
   return (
     <div>
       <Banner />
-      <Blog/>
       <CourseCategory />
       <InstructorHome />
-      {/* <MiniDashboard />  */}
       <BecomeInstructor />
       <Features />
       <Discount />

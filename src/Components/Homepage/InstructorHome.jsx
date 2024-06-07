@@ -48,14 +48,12 @@ const InstructorHome = () => {
                 <Row>
                     <Col lg="5" md="12">
                         <div className='caption wow fadeInUp'>
-                            <img className='tag' src="images/instructors/tag-2.png" alt='home'></img>
+                            <img className='tag' src="images/tag-2.png" alt='home'></img>
                             <h5 className='text-primary main-title'>Our Instructors</h5>
                             {data.map((data, id) => (
                                 <div key={id}>
-                                    <h2>{data.instructor_title}Meet the Dedicated
-                                        Educators Shaping
-                                        Your Future.</h2>
-                                    <h6>{data.instructor_caption}Lorem ipsum dolor sit amet consectetur. Non convallis sed id aliquam tempus. Volutpat tortor tincidunt egestas sit risus donec.</h6>
+                                    <h2>{data.instructor_title}</h2>
+                                    <h6>{data.instructor_caption}</h6>
                                 </div>))}
                             <div className="btn-glow my-4">
                                 <div className="btn">

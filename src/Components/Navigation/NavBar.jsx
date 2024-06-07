@@ -9,7 +9,7 @@ import { ThemeContext } from '../../ThemeContext';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [role, setRole] = useState(null);
+  const [email, setEmail] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -24,10 +24,11 @@ const Navbar = () => {
     };
 
     const token = localStorage.getItem('token');
-    const userRole = localStorage.getItem('role');
+    // const userRole = localStorage.getItem('role');
+    const userEmail = localStorage.getItem('userEmail');
     if (token) {
       setIsLoggedIn(true);
-      setRole(userRole);
+      setEmail(userEmail);
     }
     fetchData();
   }, []);
@@ -39,7 +40,14 @@ const Navbar = () => {
   const handleLogout = () => {
     setIsLoggedIn(false);
     localStorage.removeItem('token');
-    localStorage.removeItem('role');
+    localStorage.removeItem('username');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('userCity');
+    localStorage.removeItem('userPhone');
+    localStorage.removeItem('course_id');
+    localStorage.removeItem('course_title');
+
     navigate('/login');
   };
 
@@ -52,12 +60,12 @@ const Navbar = () => {
 
         <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
           <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
-          <li><Link to="/courses" className={location.pathname === '/courses' ? 'active' : ''}>Courses</Link></li>
+          <li><Link to="/categories" className={location.pathname === '/categories' ? 'active' : ''}>categories</Link></li>
           <li><Link to="/instructors" className={location.pathname === '/instructors' ? 'active' : ''}>Instructors</Link></li>
           <li><Link to="/gallery" className={location.pathname === '/gallery' ? 'active' : ''}>gallery</Link></li>
           <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact Us</Link></li>
           <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link></li>
-          {role === 'active' && <li><Link to="/enroll" className={location.pathname === '/enroll' ? 'active' : ''}>my courses</Link></li>}
+          {email && <li><Link to="/enroll" className={location.pathname === '/enroll' ? 'active' : ''}>my courses</Link></li>}
           {isLoggedIn ? (
             <div className="user-options">
               <div className="dropdown">

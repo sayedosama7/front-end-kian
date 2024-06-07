@@ -29,7 +29,7 @@ const CourseCategory = () => {
                     <div className='course-title d-flex justify-content-between align-items-center mb-5 wow fadeInUp'>
                         <h6 className='main-title mb-3'>See what you can learn with kian academy</h6>
                         <div className="btn-glow">
-                            <div className="btn"><Link to="/courses">view all</Link></div>
+                            <div className="btn"><Link to="/categories">view all</Link></div>
                         </div>
                     </div>
 
@@ -63,7 +63,7 @@ const CourseCategory = () => {
                         {data.map((course, id) => (
                             <SwiperSlide key={id} className='course-box wow fadeInUp' animation-duration="1.2s" data-wow-delay="0.2s">
                                 <img src={`http://127.0.0.1:8000/categories/img/${course.cate_image}`} alt={course.title} />
-                                <p className='text-primary fw-bold py-2 px-1'>{course.title}</p>
+                                <p className='text-primary fw-bold py-2 px-1'>{course.category_title}</p>
                             </SwiperSlide>
                         ))}
                     </Swiper>

@@ -25,9 +25,9 @@ function Discount() {
                         {data.map((data, id) => (
                             <div key={id}>
                                 <div className='text wow fadeInUp'>
-                                    <h2 className='text-primary'>{data.discount_title_1}Get a {data.discount_percent}30% Discount!</h2>
-                                    <h2 className='text-primary'>{data.discount_title_2}Create Your Free Account Today!</h2>
-                                    <h6>{data.discount_caption}Lorem ipsum dolor sit amet consectetur. Non convallis sed id aliquam tempus. Volutpat tortor tincidunt egestas sit risus donec.</h6>
+                                    <h2 className='text-primary'>{data.discount_title_1}{data.discount_percent}</h2>
+                                    <h2 className='text-primary'>{data.discount_title_2}</h2>
+                                    <h6>{data.discount_caption}</h6>
                                 </div>
                             </div>))}
                         <div className="btn-glow my-4">
@@ -40,8 +40,8 @@ function Discount() {
                             <div key={id}>
                                 <img
                                     className='wow fadeInUp img-fluid'
-                                    // src={`http://127.0.0.1:8000/setting/img/${data.discount_img}`}
-                                    src="images/Home/discount-stamp-2.png"
+                                    src={`http://127.0.0.1:8000/setting/img/${data.discount_img}`}
+                                    // src="images/Home/discount-stamp-2.png"
                                     alt="discount"
                                     data-wow-duration="1s"
                                     data-wow-offset="100"
