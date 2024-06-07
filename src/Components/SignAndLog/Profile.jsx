@@ -81,7 +81,7 @@ const Profile = () => {
                     </div>
 
                     <div className="col-md-12 col-lg-6 contact-banner position-relative wow fadeInUp" data-wow-delay='1s'>
-                        <img className='img-fluid' src="images/pexels-cottonbro-studio-6803545.jpg" alt="contact" />
+                        <img className='img-fluid' src="images/contact-us/contact-us.jpg" alt="contact" />
                         <img className='img-fluid position-absolute kian-logo' src="images/logo.jpeg" alt="logo" />
                     </div>
                 </div>

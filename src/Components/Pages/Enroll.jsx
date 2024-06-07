@@ -2,9 +2,14 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navigation/NavBar';
 import Footer from '../Navigation/Footer';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Enroll = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
     const [data, setData] = useState([]);
     const [userId, setUserId] = useState(null);
     const navigate = useNavigate();

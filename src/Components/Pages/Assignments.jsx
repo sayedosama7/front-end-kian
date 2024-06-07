@@ -5,6 +5,11 @@ import Navbar from '../Navigation/NavBar';
 import Footer from '../Navigation/Footer';
 
 const Assignments = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
     const [assignments, setAssignments] = useState([]);
     const [gradeData, setGradeData] = useState([]);
     const location = useLocation();
@@ -50,7 +55,7 @@ const Assignments = () => {
     // Function to get grade for a specific assignment
     const getGradeForAssignment = (assignmentTitle) => {
         const gradeItem = gradeData.find(item => item.assignmentTitle === assignmentTitle);
-        return gradeItem ? gradeItem.grade : 'No degree ';
+        return gradeItem ? gradeItem.grade : 'No degree yet';
     };
 
     return (

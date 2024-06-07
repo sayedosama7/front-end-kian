@@ -6,6 +6,11 @@ import ScrollToTop from 'react-scroll-to-top';
 import axios from 'axios';
 
 function CourseDetails() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+  }, [pathname]);
   const location = useLocation();
   const { courses_id, courses_title } = location.state || {};
 
