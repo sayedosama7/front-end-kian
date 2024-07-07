@@ -1,14 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import ScrollToTop from 'react-scroll-to-top';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import Navbar from '../Navigation/NavBar';
+import { UserContext } from '../../UserContext';  // Import UserContext
 
 const SignUp = () => {
-    const { pathname } = useLocation();
+    const { auth, setAuth } = useContext(UserContext);  // Destructure setAuth and auth from UserContext
     const navigate = useNavigate();
+    const { pathname } = useLocation();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -78,15 +80,9 @@ const SignUp = () => {
                 }
             });
 
-            const { token } = response.data;
-            const { username, email, city, phone, id } = response.data.data;
+            const { token, data: { username, email, city, phone, id } } = response.data;
 
-            localStorage.setItem('token', token);
-            localStorage.setItem('username', username);
-            localStorage.setItem('userId', id);
-            localStorage.setItem('userEmail', email);
-            localStorage.setItem('userCity', city);
-            localStorage.setItem('userPhone', phone);
+            setAuth({ token, username, email, city, phone, id, userId: id });  // Set userId in context
 
             navigate('/', { replace: true });
             Toast.fire({
@@ -181,8 +177,9 @@ const SignUp = () => {
             <ScrollToTop smooth
                 color='var(--background-color)'
                 style={{ backgroundColor: 'var(--text-color)' }}
-                className='animate__animated animate__flash animate__infinite	infinite animate__slower'
-            />        </div>
+                className='animate__animated animate__flash animate__infinite infinite animate__slower'
+            />
+        </div>
     );
 };
 

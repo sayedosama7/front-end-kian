@@ -1,27 +1,22 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from '../Navigation/NavBar';
 import Footer from '../Navigation/Footer';
+import { UserContext } from '../../UserContext';
 
 const Assignments = () => {
     const { pathname } = useLocation();
+    const { auth } = useContext(UserContext);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
+    
     const [assignments, setAssignments] = useState([]);
     const [gradeData, setGradeData] = useState([]);
     const location = useLocation();
     const { courseTitle, courseId } = location.state || {};
-    const [userId, setUserId] = useState(null);
-
-    useEffect(() => {
-        const storedUserId = localStorage.getItem('userId');
-        if (storedUserId) {
-            setUserId(storedUserId);
-        }
-    }, []);
 
     useEffect(() => {
         if (courseTitle) {
@@ -40,8 +35,8 @@ const Assignments = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                if (courseId && userId) {
-                    const response = await axios.get(`http://127.0.0.1:8000/api/showOneStudentGrades/${userId}/${courseId}`);
+                if (courseId && auth.id) {
+                    const response = await axios.get(`http://127.0.0.1:8000/api/showOneStudentGrades/${auth.id}/${courseId}`);
                     setGradeData(response.data.data || []);
                 }
             } catch (error) {
@@ -50,7 +45,7 @@ const Assignments = () => {
         };
 
         fetchData();
-    }, [userId, courseId]);
+    }, [auth.id, courseId]);
 
     // Function to get grade for a specific assignment
     const getGradeForAssignment = (assignmentTitle) => {

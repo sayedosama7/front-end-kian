@@ -95,7 +95,7 @@ const Footer = () => {
                   <div key={id}>
                     <h6 className="text-uppercase fw-bold text-primary mb-3">our location</h6>
                     <a href={data.footer_address_link}>
-                      <iframe className='img-fluid' src={data.footer_address_iframe} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      <iframe className='img-fluid' src={data.footer_address_iframe}  loading="lazy" ></iframe>
                     </a>
                   </div>))}
               </div>

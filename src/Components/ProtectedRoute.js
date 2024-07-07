@@ -1,10 +1,10 @@
-// src/components/ProtectedRoute.js
-import React from 'react';
+import React, { useContext } from 'react';
 import { Navigate } from 'react-router-dom';
+import { UserContext } from '../UserContext';
 
 const ProtectedRoute = ({ element: Component }) => {
-  const isAuthenticated = !!localStorage.getItem('token'); // Check if the user is authenticated
-
+  const { auth } = useContext(UserContext);
+  const isAuthenticated = !!auth.email; // Changed from auth.email to auth.token
   return isAuthenticated ? <Component /> : <Navigate to="/login" />;
 };
 

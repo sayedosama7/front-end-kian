@@ -1,31 +1,26 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import Navbar from '../Navigation/NavBar';
 import Footer from '../Navigation/Footer';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { UserContext } from '../../UserContext';
 
 const Enroll = () => {
+    const { auth } = useContext(UserContext);
     const { pathname } = useLocation();
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
+
     const [data, setData] = useState([]);
-    const [userId, setUserId] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
-        const storedUserId = localStorage.getItem('userId');
-        if (storedUserId) {
-            setUserId(storedUserId);
-        }
-    }, []);
-
-    useEffect(() => {
-        if (userId) {
+        if (auth.id) {
             async function fetchData() {
                 try {
-                    const response = await axios.get(`http://127.0.0.1:8000/api/enrollments/${userId}`);
+                    const response = await axios.get(`http://127.0.0.1:8000/api/enrollments/${auth.id}`);
                     setData(response.data.data);
 
                     if (response.data.data.length > 0) {
@@ -40,7 +35,7 @@ const Enroll = () => {
             }
             fetchData();
         }
-    }, [userId]);
+    }, [auth.id]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -113,6 +108,3 @@ const Enroll = () => {
 }
 
 export default Enroll;
-
-
-

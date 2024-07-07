@@ -18,6 +18,7 @@ import ThemeProvider from "./ThemeContext";
 import Enroll from "./Components/Pages/Enroll";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import Courses from "./Components/Pages/Courses";
+import UserProvider from "./UserContext";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,6 @@ const router = createBrowserRouter([
   {
     path: "/courseDetails",
     element: <CourseDetails />
-
   },
   {
     path: "/instructors",
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <Profile />
+    element: <ProtectedRoute element={Profile} />
   },
   {
     path: "/forget",
@@ -84,7 +84,9 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <ThemeProvider>
-    <RouterProvider router={router} />
-  </ThemeProvider>
+  <UserProvider>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  </UserProvider>
 );

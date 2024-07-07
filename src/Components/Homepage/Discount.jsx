@@ -1,10 +1,12 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
+import { UserContext } from '../../UserContext';
 
 function Discount() {
     const [data, setData] = useState([]);
+    const { isLoggedIn } = useContext(UserContext);
 
     useEffect(() => {
         async function fetchData() {
@@ -17,6 +19,7 @@ function Discount() {
         }
         fetchData();
     }, []);
+
     return (
         <div className='discount py-5'>
             <Container>
@@ -25,15 +28,16 @@ function Discount() {
                         {data.map((data, id) => (
                             <div key={id}>
                                 <div className='text wow fadeInUp'>
-                                    <h2 className='text-primary'>{data.discount_title_1}{data.discount_percent}</h2>
+                                    <h2 className='text-primary'>{data.discount_title_1} {data.discount_percent}</h2>
                                     <h2 className='text-primary'>{data.discount_title_2}</h2>
                                     <h6>{data.discount_caption}</h6>
                                 </div>
                             </div>))}
-                        <div className="btn-glow my-4">
-                            <div className="btn"><Link to="/signup">join now</Link></div>
-                        </div>
-
+                        {!isLoggedIn && (
+                            <div className="btn-glow my-4">
+                                <div className="btn"><Link to="/signup">join now</Link></div>
+                            </div>
+                        )}
                     </Col>
                     <Col xl="6" md="12">
                         {data.map((data, id) => (
@@ -41,7 +45,6 @@ function Discount() {
                                 <img
                                     className='wow fadeInUp img-fluid'
                                     src={`http://127.0.0.1:8000/setting/img/${data.discount_img}`}
-                                    // src="images/Home/discount-stamp-2.png"
                                     alt="discount"
                                     data-wow-duration="1s"
                                     data-wow-offset="100"
@@ -56,6 +59,7 @@ function Discount() {
                 </Row>
             </Container>
         </div>
-    )
+    );
 }
+
 export default Discount;

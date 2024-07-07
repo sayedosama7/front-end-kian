@@ -1,12 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../Navigation/NavBar';
 import ScrollToTop from 'react-scroll-to-top';
 import Swal from 'sweetalert2';
-import bcrypt from 'bcryptjs'; // استيراد bcryptjs
+import bcrypt from 'bcryptjs';
+import { UserContext } from '../../UserContext'; // تأكد من مسار الاستيراد
 
 const LogIn = () => {
     const { pathname } = useLocation();
@@ -31,6 +32,7 @@ const LogIn = () => {
     });
 
     const navigate = useNavigate();
+    const { auth, setAuth } = useContext(UserContext); // استخدام الـ context بشكل صحيح
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -38,11 +40,10 @@ const LogIn = () => {
     const [errors, setErrors] = useState({});
 
     useEffect(() => {
-        const token = localStorage.getItem('token');
-        if (token) {
+        if (auth.token) {
             navigate('/', { replace: true });
         }
-    }, []);
+    }, [auth]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -52,7 +53,6 @@ const LogIn = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // Validate form data
         const newErrors = {};
         if (!formData.email) newErrors.email = 'Please Enter Your Email.';
         if (!formData.password) newErrors.password = 'Please Enter Your Password.';
@@ -82,12 +82,14 @@ const LogIn = () => {
             }
 
             const token = response.data.token;
-            localStorage.setItem('token', token);
-            localStorage.setItem('username', user.username);
-            localStorage.setItem('userEmail', user.email);
-            localStorage.setItem('userCity', user.city);
-            localStorage.setItem('userPhone', user.phone);
-            localStorage.setItem('userId', user.id);
+            setAuth({
+                token,
+                username: user.username,
+                email: user.email,
+                city: user.city,
+                phone: user.phone,
+                id: user.id,
+            });
 
             navigate('/', { replace: true });
             Toast.fire({
@@ -132,10 +134,6 @@ const LogIn = () => {
                             </div>
 
                             <div className="mb-4 d-flex justify-content-between mb-4">
-                                {/* <div className="form-check">
-                                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                    <label htmlFor='exampleCheck1' className="form-check-label">Remember me</label>
-                                </div> */}
                                 <div className="text-primary-hover">
                                     <Link to="/forget">
                                         <p>Forgot password?</p>
@@ -144,21 +142,7 @@ const LogIn = () => {
                             </div>
 
                             <input type="submit" value="Login" className="btn-submit" />
-
                         </form>
-
-                        {/* <div className="row">
-                            <div className="position-relative my-4">
-                                <hr />
-                                <p className="small position-absolute top-50 start-50 translate-middle bg-primary px-5">Or</p>
-                            </div>
-                            <div className="col-xxl-6 d-grid">
-                                <a href="#" className="btn btn-primary btn-block mb-2 signup-with"><i className="fab fa-fw fa-google me-2"></i>Login with Google</a>
-                            </div>
-                            <div className="col-xxl-6 d-grid">
-                                <a href="#" className="btn btn-primary btn-block signup-with-facebook"><i className="fab fa-fw fa-facebook-f me-2"></i>Login with Facebook</a>
-                            </div>
-                        </div> */}
 
                         <div className="mt-4 text-center">
                             <span className='text-muted'>Don't have an account? <Link to="/signup">Sign up here</Link></span>

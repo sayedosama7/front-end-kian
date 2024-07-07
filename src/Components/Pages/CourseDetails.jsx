@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import Navbar from '../Navigation/NavBar';
 import Footer from '../Navigation/Footer';
 import { Link, useLocation } from 'react-router-dom';
 import ScrollToTop from 'react-scroll-to-top';
 import axios from 'axios';
+import { UserContext } from '../../UserContext';
 
 function CourseDetails() {
   const { pathname } = useLocation();
+  const { auth, isLoggedIn } = useContext(UserContext);
 
   useEffect(() => {
       window.scrollTo(0, 0);
   }, [pathname]);
+
   const location = useLocation();
   const { courses_id, courses_title } = location.state || {};
 
   const [course, setCourse] = useState(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // حالة تسجيل الدخول
 
   useEffect(() => {
     if (courses_id && courses_title) {
@@ -28,12 +30,6 @@ function CourseDetails() {
         }
       };
       fetchCourseData();
-    }
-
-    // التحقق من وجود الـ token هنا وتعيين حالة تسجيل الدخول
-    const token = localStorage.getItem('token');
-    if (token) {
-      setIsLoggedIn(true);
     }
   }, [courses_id, courses_title]);
 
@@ -109,12 +105,12 @@ function CourseDetails() {
                 </table>
               </div>
 
-              {!isLoggedIn ? ( // فقط عرض الزر إذا كان المستخدم مسجل الدخول
+              {!isLoggedIn ? ( // عرض الزر إذا كان المستخدم غير مسجل الدخول
                 <div className="btn-glow mt-2">
                   <div className="btn"><Link to="/signup">Enroll Now</Link></div>
                 </div>
               ) : (
-                // إذا لم يكن المستخدم مسجل الدخول، لا تظهر الزر
+                // عدم عرض الزر إذا كان المستخدم مسجل الدخول
                 null
               )}
             </>

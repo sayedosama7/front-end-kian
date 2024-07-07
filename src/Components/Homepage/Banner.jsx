@@ -1,11 +1,12 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Col, Container, Row } from 'reactstrap';
+import { UserContext } from '../../UserContext';
 
 function Banner() {
   const [data, setData] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLoggedIn } = useContext(UserContext);
 
   useEffect(() => {
     async function fetchData() {
@@ -14,10 +15,6 @@ function Banner() {
         setData(response.data.data);
       } catch (error) {
         console.error('Error fetching data:', error);
-      }
-      const token = localStorage.getItem('token');
-      if (token) {
-        setIsLoggedIn(true);
       }
     }
     fetchData();
@@ -63,7 +60,7 @@ function Banner() {
         </Row>
       </Container>
     </div>
-  )
+  );
 }
 
 export default Banner;

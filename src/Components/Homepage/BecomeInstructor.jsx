@@ -24,7 +24,7 @@ function BecomeInstructor() {
                     <Col md="12" className='join-contain bg- p-5'>
                         <div className='box d-flex justify-content-between align-items-center'>
                             {data.map((data, id) => (
-                                <div className='text wow fadeInUp'>
+                                <div  key={id} className='text wow fadeInUp'>
                                     <div key={id}>
                                         <h2>{data.instructor_become_title}</h2>
                                         <h6 className='w-75'>{data.instructor_become_caption}</h6>
